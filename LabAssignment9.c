@@ -156,11 +156,12 @@ int main(void)
     }
     for(int i = 0; i < recordSz; i++)
     {
-        insertRecord(hashTable, pRecords + i, recordSz);
+        insertRecord(hashTable, pRecords + i, TableSize);
     }
-    displayRecordsInHash(hashTable, recordSz);
-    free(hashTable);
+    displayRecordsInHash(hashTable, TableSize);
+    
     free(pRecords);
+    free(hashTable);
 
     return 0;
 }
